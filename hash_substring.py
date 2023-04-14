@@ -1,4 +1,5 @@
 # python3
+
 # Matīss Lakševics 4.grupa, DITF, IT
 def read_input():
     return (input().rstrip(), input().rstrip())
