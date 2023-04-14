@@ -14,8 +14,8 @@ def read_input():
                 with open(filename, "r") as file:
                     input_p = file.readline()
                     input_t = file.readline()
-            except:
-                return "File not found"
+            except EOFError as e:
+                print(end="")
     return (input_p.rstrip(), input_t.rstrip())
 def print_occurrences(output):
     print(' '.join(map(str, output)))
