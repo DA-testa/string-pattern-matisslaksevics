@@ -10,12 +10,9 @@ def read_input():
         filename = input()
         filename = "tests/" + filename
         if 'a' not in filename:
-            try:
-                with open(filename, "r") as file:
-                    input_p = file.readline()
-                    input_t = file.readline()
-            except EOFError as e:
-                print(end="")
+            with open(filename, "r") as file:
+                input_p = file.readline()
+                input_t = file.readline()
     return (input_p.rstrip(), input_t.rstrip())
 def print_occurrences(output):
     print(' '.join(map(str, output)))
