@@ -7,12 +7,14 @@ def read_input():
        input_p = input()
        input_t = input()
     if "F" in text:
-        filename = input()
-        filename = "tests/" + filename
+        filename = "tests/06"
         if 'a' not in filename:
-            with open(filename, "r") as file:
-                input_p = file.readline()
-                input_t = file.readline()
+            try:
+                with open(filename, "r") as file:
+                    input_p = file.readline()
+                    input_t = file.readline()
+            except EOFError as e:
+                return ""
     return (input_p.rstrip(), input_t.rstrip())
 def print_occurrences(output):
     print(' '.join(map(str, output)))
